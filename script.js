@@ -38,7 +38,8 @@ loginForm.addEventListener("submit", (e) => {
   if (usuario === "admin" && clave === "1234") {
     loginContainer.style.display = "none";
     panel.style.display = "block";
-    lista.style.display = "none";
+    lista.style.display = "block";
+    mostrarHamburguesas();  
   } else {
     error.textContent = "Usuario o contraseña incorrectos";
   }
@@ -88,23 +89,23 @@ function mostrarHamburguesas() {
     div.className = "hamburguesa";
 
     div.innerHTML = `
-      <div class="tarjeta">
-        <div class="numero">${index + 1}</div>
-        <div class="info">
-          <h3>${ham.nombre}</h3>
-          <p><strong>Descripción:</strong> ${ham.descripcion}</p>
-          <p><strong>Ingredientes:</strong> ${ham.ingredientes}</p>
-          <p><strong>Preparación:</strong> ${ham.preparacion}</p>
-        </div>
-        <div class="foto">
-          ${ham.foto ? `<img src="${ham.foto}" alt="foto">` : `<div class="no-foto">Sin foto</div>`}
-        </div>
-      </div>
-      <div class="botones">
-        <button onclick="editar(${index})">✏️ Editar</button>
-        <button onclick="eliminar(${index})">🗑️ Eliminar</button>
-      </div>
-    `;
+  <div class="tarjeta">
+    <div class="numero">${index + 1}</div>
+    <div class="info">
+      <h3>${ham.nombre}</h3>
+      <p><strong>Descripción:</strong> ${ham.descripcion}</p>
+      <p><strong>Ingredientes:</strong> ${ham.ingredientes}</p>
+      <p><strong>Preparación:</strong> ${ham.preparacion}</p>
+    </div>
+    <div class="foto">
+      ${ham.foto ? `<img src="${ham.foto}" alt="foto">` : `<div class="no-foto">Sin foto</div>`}
+    </div>
+    <div class="botones">
+      <button onclick="editar(${index})">✏️ Editar</button>
+      <button onclick="eliminar(${index})">🗑️ Eliminar</button>
+    </div>
+  </div>
+`;
 
     lista.appendChild(div);
   });
@@ -141,6 +142,6 @@ document.addEventListener("click", (e) => {
 
   if (!esClickDentroDelFormulario && !esClickEnBotonAgregar && !esClickEnBotonEditar) {
     formularioContainer.style.display = "none";
-    lista.style.display = "none";
+   // lista.style.display = "none";
   }
 });
