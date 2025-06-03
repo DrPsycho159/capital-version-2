@@ -1,0 +1,486 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #413f3f;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: black;
+  color: #ffcc04;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+header button {
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background-color: #ffcc04;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+header button:hover {
+  background-color: #ffcc04;
+  transform: scale(1.05);
+}
+
+/* Botón agregar */
+.agregar {
+  background-color: #ffcc04;
+  text-align: center;
+  padding: 15px;
+}
+
+
+/* Formulario */
+#formulario-container {
+  padding: 30px;
+  background: #fff8dc;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#formulario-container input,
+#formulario-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/*esto modifica el boton de guardar del formulario*/
+#formulario-container button {
+  background: black;
+  color: #ffcc04;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto 0;
+  display: block;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#formulario-container button:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+/* Tarjetas hamburguesas */
+.hamburguesa {
+  border: 5px solid black;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #fff8dc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hamburguesa {
+  position: relative;
+}
+
+.numero {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffcc04;
+  background-color: black;
+  border-radius: 50%;
+  width: 80px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.hamburguesa {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff8dc;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  flex: 1;
+}
+
+.numero {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffcc04;
+  background-color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.info {
+  flex: 2;
+  min-width: 200px;
+  padding: 10px 0;
+}
+
+.foto {
+  margin-left: 20px;
+}
+.foto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+/* NUEVO: Bloque de botones aparte */
+.editar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-left: 2px solid #ccc;
+  min-width: 140px;
+}
+
+.no-foto {
+  width: 200px;
+  height: 200px;
+  background: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.editar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #ffcc04;
+  padding: 20px 10px;
+  border-radius: 12px;
+  min-width: 120px;
+  align-items: stretch;
+  justify-content: center;
+}
+.editar button {
+  background-color: #ffcc04;
+  color: black;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.editar button:hover {
+  background-color: #ffe164;
+}
+
+/* Login */
+#login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFD100;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+}
+
+.logo-login {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.login-box h2 {
+  margin-bottom: 0px;
+  color: #222;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-box button {
+  background-color: #FFD100;
+  border: none;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #e6bd00;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.center {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  padding: 10px 20px;
+  background-color: #FFD100;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hamburguesa h3 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #111;
+  margin-top: 0;       /* ❗ Elimina espacio arriba */
+  margin-bottom: 0px;  /* ❗ Reduce el espacio abajo */
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #ddd;
+}
+
+.info p {
+  margin: 8px 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.info p strong {
+  color: #222;
+  font-weight: 600;
+}
+.hamburguesa:hover {
+  background-color: #fff1c1;
+  transition: background-color 0.3s ease;
+}
+.hamburguesa:nth-child(even) {
+  background-color: #fff2b8;
+}
+@media (max-width: 768px) {
+  .hamburguesa {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto {
+    margin: 20px 0;
+  }
+
+  .editar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 0;
+  }
+
+  .foto img,
+  .no-foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hamburguesa h3 {
+    font-size: 28px;
+    
+  }
+
+  .info p {
+    font-size: 18px;
+  }
+}
+/*esto es el estilo del boton agregar hamburguesa*/
+.card-button { 
+  background-color: #fff8dc;
+  color: black;
+  padding: 30px 40px;
+  font-size: 45px;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: block;
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.card-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+  background-color: #ffeaaa;
+}
+.hamburguesa {
+  gap: 10px;                  /* antes: 20px */
+  margin: 10px auto;          /* menos espacio entre tarjetas */
+  padding: 10px;              /* opcional: para más compresión */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffeaaa;
+  max-width: 1100px;           /* ✅ limitar el ancho total */
+}
+/* TARJETA hasta la foto */
+.tarjeta {
+  background-color: #fff8dc;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 700px;     /* 🔧 más pequeño */
+  width: 100%;          /* ✅ ocupa el ancho disponible hasta el max-width */
+  margin: 20px auto;
+  align-items: center;
+  gap: 20px;             /* agrega separación entre hijos */
+}
+
+/* Número */
+.numero {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffcc04;
+  background-color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+/* Info */
+.info {
+  flex: 2;
+  min-width: 50px;
+}
+
+/* Foto */
+.foto {
+  margin-left: 20px;
+}
+
+.foto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+/* BOTONES en tarjeta separada */
+.botones {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+   align-self: flex-start;  /* ✅ asegura que se centre verticalmente respecto a la foto */
+  flex-direction: column;
+  gap: 40px;
+  height: fit-content;
+}
+.botones button {
+  padding: 20px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffcc04;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón Editar */
+.botones button:first-child {
+  background-color: #000000;
+}
+
+.botones button:first-child:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+/* Botón Eliminar */
+.botones button:last-child {
+  background-color: #dc3545;
+}
+
+.botones button:last-child:hover {
+  background-color: #a71d2a;
+  transform: scale(1.05);
+}
